@@ -1,14 +1,24 @@
+package Servlets;
+
 import java.io.IOException;
 import java.util.List;
 
-import DAOmodeles.octest.RoomDAO;
-import db_connection.RoomDaoImp;
-import modeles.octest.Room;
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import DAO.RoomDao;
+import Db_Connection.RoomDaoImp;
+import modeles.Room;
+
+
 
 @WebServlet("/SearchServlet")
 public class SearchServlet extends HttpServlet {
     private static final long serialVersionUID = 1L;
-    private RoomDAO roomDAO;
+    private RoomDao roomDAO;
 
     public void init() {
         roomDAO = new RoomDaoImp();
@@ -21,6 +31,6 @@ public class SearchServlet extends HttpServlet {
 
         request.setAttribute("rooms", rooms);
 
-        request.getRequestDispatcher("search_results.jsp").forward(request, response);
+        request.getRequestDispatcher("search_rlt.jsp").forward(request, response);
     }
 }

@@ -29,7 +29,7 @@ public  class ReservationDaoImp implements ReservationDAO {
 	    		    int room_id = resultSet.getInt("room_id");
 	    		    Date start_date =  resultSet.getDate("start_date");
 	    		    Date end_date =  resultSet.getDate("end_date");
-	    		    Reservation reservation = new Reservation(reservation_id,room_id,start_date,end_date);
+	    		    Reservation reservation = new Reservation(reservation_id,end_date,start_date,room_id);
 		           reservations.add(reservation);
 	    	       }
 	     } catch (SQLException e) {

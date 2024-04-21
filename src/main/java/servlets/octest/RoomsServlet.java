@@ -6,7 +6,7 @@ import DAOmodeles.octest.RoomDAO;
 import db_connection.RoomDaoImp;
 import modeles.octest.Room;
 
-@WebServlet("/RoomServlet")
+@WebServlet("/RoomsServlet")
 public class RoomsServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	private RoomDAO roomDAO;  

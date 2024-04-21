@@ -1,4 +1,4 @@
-package modeles.octest;
+package modeles;
 
 import java.util.Date;
 
@@ -7,16 +7,15 @@ public class Reservation {
     private int room_id;
     private Date start_date;
     private Date end_date;
-    
-    
-	public Reservation(int reservation_id, Date start_date, Date end_date, int room_id) {
+	
+	
+	public Reservation(int reservation_id, int room_id, Date start_date, Date end_date) {
 		super();
 		this.reservation_id = reservation_id;
 		this.room_id = room_id;
 		this.start_date = start_date;
 		this.end_date = end_date;
 	}
-	
 	
 	public int getReservation_id() {
 		return reservation_id;
